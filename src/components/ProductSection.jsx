@@ -1,7 +1,8 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import { Container } from "./Container";
 
-function ProductSection() {
+const ProductSection = () => {
   const products = [
     {
       id: 1,
@@ -209,18 +210,20 @@ function ProductSection() {
       image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
       rating: { rate: 3.6, count: 145 },
     },
-    ];
-    
+  ];
+
   return (
-    <section className="px-5">
-          <p className="text-sm text-gray-500 mb-2">Available Product List</p>
-          <div>
-              {products.map((product) => (
-                <ProductCard key={product.id} />
-              ))}
-          </div>
+    <section className="px-5 mb-5">
+      <Container>
+        <p className="text-sm text-gray-500 mb-2">Available Product Lists</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {products.map((products) => (
+            <ProductCard key={products.id} products={products} />
+          ))}
+        </div>
+      </Container>
     </section>
   );
-}
+};
 
 export default ProductSection;
