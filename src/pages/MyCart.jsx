@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Container } from "../components/Container";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const MyCart = () => {
   return (
-    <div>MyCart</div>
-  )
-}
+    <Container>
+      <BreadCrumbs currentPageTitle="My Cart" />
+    </Container>
+  );
+};
 
-export default MyCart
+export default MyCart;

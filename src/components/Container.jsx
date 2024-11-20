@@ -1,5 +1,9 @@
 import React from "react";
 
-export const Container = ({ children }) => {
-  return <div className="w-[1200px] mx-auto">{children}</div>;
+export const Container = ({ children, className }) => {
+  return (
+    <div className="w-full lg:x-[720px] lg:w-[1000px] mx-auto ${className}">
+      {children}
+    </div>
+  );
 };
