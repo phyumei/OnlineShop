@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/product";
+import products from "../data/products";
 import { Container } from "../components/Container";
 import Rating from "../components/Rating";
 import BreadCrumbs from "../components/BreadCrumbs";
