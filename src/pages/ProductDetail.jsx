@@ -1,22 +1,24 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/products";
 import { Container } from "../components/Container";
 import Rating from "../components/Rating";
 import BreadCrumbs from "../components/BreadCrumbs";
+import useProductStore from "../store/useProductStore";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const { products } = useProductStore();
   const currentProduct = products.find((products) => products.id == id);
+
   return (
-    <Container>
+    <Container className="px-5">
       <BreadCrumbs currentPageTitle="Product Detail" />
       <div className="border border-black p-10">
-        <div className="grid grid-cols-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="col-span-1">
             <img
               src={currentProduct.image}
-              className="block w-3/4 mx-auto"
+              className="h-[200px] block w-3/4 mb-5 md:mb-0 md:mx-auto"
               alt=""
             />
           </div>
