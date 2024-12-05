@@ -4,6 +4,7 @@ import { Container } from "./Container";
 import { Link } from "react-router-dom";
 import useCartStore from "../store/useCartStore";
 import useProductStore from "../store/useProductStore";
+import emptyCartImg from "../assets/emptyCartImg.svg";
 
 const CartSection = () => {
   const { cart } = useCartStore();
@@ -23,9 +24,15 @@ const CartSection = () => {
   return (
     <>
       <div className="flex flex-col gap-5 h-full">
-        {cart.map((cart) => (
-          <Cart key={cart.id} cart={cart} />
-        ))}
+        {cart.length === 0 ? (
+          <img
+            src={emptyCartImg}
+            className="w-[300px] block mx-auto mt-10"
+            alt=""
+          />
+        ) : (
+          cart.map((cart) => <Cart key={cart.id} cart={cart} />)
+        )}
 
         <div className="absolute bottom-10 left-0 w-full bg-white">
           <Container className="px-5">

@@ -6,6 +6,8 @@ const useCartStore = create((set) => ({
     { id: 2, productId: 3, quantity: 1 },
   ],
 
+  addCart: (newCart) => set((state) => ({ cart: [...state.cart, newCart] })),
+
   increaseQuantity: (id) =>
     set((state) => ({
       cart: state.cart.map((el) =>

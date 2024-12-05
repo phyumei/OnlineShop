@@ -1,7 +1,8 @@
 import React from "react";
 import Rating from "./Rating";
-import { Link } from "react-router-dom";
-import carts from "../data/carts";
+import { Link, useNavigate } from "react-router-dom";
+import useCartStore from "../store/useCartStore";
+import toast from "react-hot-toast";
 
 const ProductCard = ({
   products: {
@@ -12,8 +13,31 @@ const ProductCard = ({
     rating: { rate },
   },
 }) => {
+  const { cart, addCart } = useCartStore();
+  const navigate = useNavigate();
+
+  const handleAddedBtn = (event) => {
+    event.stopPropagation();
+    toast.error("Item is already in cart");
+  };
+
+  const handleAddCartBtn = (event) => {
+    event.stopPropagation();
+    const newCart = {
+      id: crypto.randomUUID(),
+      productId: id,
+      quantity: 1,
+    };
+    addCart(newCart);
+  };
+
+  const handleOpenDetail = () => {
+    navigate(`/product-detail/${id}`);
+  };
+
   return (
-    <Link
+    <div
+      onClick={handleOpenDetail}
       to={`/product-detail/${id}`}
       className="border border-black p-5 flex flex-col items-start gap-5"
     >
@@ -22,17 +46,23 @@ const ProductCard = ({
       <Rating rate={rate} />
       <div className="flex justify-between items-end w-full ">
         <p>{price}</p>
-        {carts.find((cart) => cart.product.id == id) ? (
-          <button className="text-sm border bg-black text-white px-3 py-1">
+        {cart.find((cart) => cart.productId == id) ? (
+          <button
+            onClick={handleAddedBtn}
+            className="text-sm border bg-black text-white px-3 py-1"
+          >
             Added
           </button>
         ) : (
-          <button className="text-sm border border-black px-3 py-1">
+          <button
+            onClick={handleAddCartBtn}
+            className="text-sm border border-black px-3 py-1"
+          >
             Add to Cart
           </button>
         )}
       </div>
-    </Link>
+    </div>
   );
 };
 
