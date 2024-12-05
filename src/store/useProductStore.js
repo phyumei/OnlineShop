@@ -11,6 +11,7 @@ const useProductStore = create((set) => ({
       category: "men's clothing",
       image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       rating: { rate: 3.9, count: 120 },
+      slug: "fjallraven-foldsack-no-1-backpack-fits-15-laptops",
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const useProductStore = create((set) => ({
       image:
         "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       rating: { rate: 4.1, count: 259 },
+      slug: "mens-casual-premium-slim-fit-t-shirts",
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ const useProductStore = create((set) => ({
       category: "men's clothing",
       image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
       rating: { rate: 4.7, count: 500 },
+      slug: "mens-cotton-jacket",
     },
     {
       id: 4,
@@ -42,6 +45,7 @@ const useProductStore = create((set) => ({
       category: "men's clothing",
       image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
       rating: { rate: 2.1, count: 430 },
+      slug: "mens-casual-slim-fit",
     },
     {
       id: 5,
@@ -53,6 +57,7 @@ const useProductStore = create((set) => ({
       category: "jewelery",
       image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
       rating: { rate: 4.6, count: 400 },
+      slug: "john-hardy-womens-legends-naga-gold-and-silver-dragon-station-chain-bracelet",
     },
     {
       id: 6,
@@ -63,6 +68,7 @@ const useProductStore = create((set) => ({
       category: "jewelery",
       image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
       rating: { rate: 3.9, count: 70 },
+      slug: "solid-gold-petite-micropave",
     },
     {
       id: 7,
@@ -73,6 +79,7 @@ const useProductStore = create((set) => ({
       category: "jewelery",
       image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
       rating: { rate: 3, count: 400 },
+      slug: "white-gold-plated-princess",
     },
     {
       id: 8,
@@ -83,6 +90,7 @@ const useProductStore = create((set) => ({
       category: "jewelery",
       image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
       rating: { rate: 1.9, count: 100 },
+      slug: "pierced-owl-rose-gold-plated-stainless-steel-double",
     },
     {
       id: 9,
@@ -93,6 +101,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
       rating: { rate: 3.3, count: 203 },
+      slug: "wd-2tb-elements-portable-external-hard-drive-usb-30",
     },
     {
       id: 10,
@@ -103,6 +112,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       rating: { rate: 2.9, count: 470 },
+      slug: "sandisk-ssd-plus-1tb-internal-ssd-sata-iii-6-gb-s",
     },
     {
       id: 11,
@@ -114,6 +124,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
       rating: { rate: 4.8, count: 319 },
+      slug: "silicon-power-256gb-ssd-3d-nand-a55-slc-cache-performance-boost-sata-iii-25",
     },
     {
       id: 12,
@@ -125,6 +136,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
       rating: { rate: 4.8, count: 400 },
+      slug: "wd-4tb-gaming-drive-works-with-playstation-4-portable-external-hard-drive",
     },
     {
       id: 13,
@@ -135,6 +147,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
       rating: { rate: 2.9, count: 250 },
+      slug: "acer-sb220q-bi-215-inches-full-hd-1920-x-1080-ips-ultra-thin",
     },
     {
       id: 14,
@@ -146,6 +159,7 @@ const useProductStore = create((set) => ({
       category: "electronics",
       image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
       rating: { rate: 2.2, count: 140 },
+      slug: "samsung-49-inch-chg90-144hz-curved-gaming-monitor-lc49hg90dmnxza-super-ultrawide-screen-qled",
     },
     {
       id: 15,
@@ -156,6 +170,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
       rating: { rate: 2.6, count: 235 },
+      slug: "biylaclesen-womens-3-in-1-snowboard-jacket-winter-coats",
     },
     {
       id: 16,
@@ -167,6 +182,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
       rating: { rate: 2.9, count: 340 },
+      slug: "lock-and-love-womens-removable-hooded-faux-leather-moto-biker-jacket",
     },
     {
       id: 17,
@@ -177,6 +193,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
       rating: { rate: 3.8, count: 679 },
+      slug: "rain-jacket-women-windbreaker-striped-climbing-raincoats",
     },
     {
       id: 18,
@@ -187,6 +204,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
       rating: { rate: 4.7, count: 130 },
+      slug: "mbj-womens-solid-short-sleeve-boat-neck-v",
     },
     {
       id: 19,
@@ -197,6 +215,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
       rating: { rate: 4.5, count: 146 },
+      slug: "opna-womens-short-sleeve-moisture",
     },
     {
       id: 20,
@@ -207,6 +226,7 @@ const useProductStore = create((set) => ({
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
       rating: { rate: 3.6, count: 145 },
+      slug: "danvouy-womens-t-shirt-casual-cotton-short",
     },
   ],
 }));

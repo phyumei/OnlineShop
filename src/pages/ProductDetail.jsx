@@ -6,9 +6,9 @@ import BreadCrumbs from "../components/BreadCrumbs";
 import useProductStore from "../store/useProductStore";
 
 const ProductDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const { products } = useProductStore();
-  const currentProduct = products.find((products) => products.id == id);
+  const currentProduct = products.find((products) => products.slug == slug);
 
   return (
     <Container className="px-5">
