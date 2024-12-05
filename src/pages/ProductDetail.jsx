@@ -18,7 +18,7 @@ const ProductDetail = () => {
           <div className="col-span-1">
             <img
               src={currentProduct.image}
-              className="h-[200px] block w-3/4 mb-5 md:mb-0 md:mx-auto"
+              className="h-[200px] md:h-auto block w-auto mb-5 md:mb-0 md:mx-auto"
               alt=""
             />
           </div>

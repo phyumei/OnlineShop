@@ -12,7 +12,6 @@ const MainLayout = () => {
       <Footer />
       <Toaster
         toastOptions={{
-          // Define default options
           className: "",
           duration: 1000,
         }}
